@@ -1,0 +1,105 @@
+
+
+
+
+
+
+
+<button type="button"  style="padding-right: 100px;"  class="btn btn-outline-primary">connexion</button>
+
+<div class="ok">
+<div   class="grid grid-nogutter surface-0 text-800">
+    <div class="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center ">
+        <section>
+            
+  <div style="background-color: rgb(242, 245, 247);" >
+<form [formGroup] ='myForm'  (ngSubmit)="save()"> <!--esm lform mte3na -->
+      <div class="container">
+         <div  class="rounded" class="col-12">
+             <label>
+             votre Nom (*):
+             </label>
+             <input   style="border:solid black 2px ;" class="form-control" type="text" placeholder="Nom" id="Nom" formControlName = "Nom">
+             <div *ngIf="Nom.touched && Nom.invalid">
+                 <small class="text-danger" *ngIf="Nom.errors.required">vide </small>
+                 <small class="text-danger" *ngIf="Nom.errors.pattern">incorrect</small>
+                 <small class="text-danger" *ngIf="Nom.errors.minlength">doit contient au moins 3 caracters</small>                <!-- small houwa lmes eli yjik fl error -->
+             </div>
+           </div>  
+       
+     
+         <div  class="col-20">
+             <label>
+                votre prenom(*):
+             </label>
+             <input style="border:solid black 2px ;" class="form-control" type="text" placeholder="prenom" id="prenom" formControlName = "prenom"> 
+             <div *ngIf="  prenom.touched &&   prenom.invalid">
+                 <small class="text-danger" *ngIf="prenom.errors.required">vide</small>
+                 <small class="text-danger" *ngIf="prenom.errors.pattern">incorrect</small>
+                 <small class="text-danger" *ngIf="prenom.errors.minlength">contient au moins 3 caracters</small>
+             </div>
+         </div>
+        
+     
+         <div class="col-20">
+             <label>
+                votre email (*):
+             </label>
+             <input  style="border:solid black 2px ;" class="form-control" type="text" placeholder="example@gmail.com" id="email"  formControlName = "email"   >
+            <div *ngIf="email.touched && email.invalid">
+                 <small class="text-danger" *ngIf="email.errors.required">vide</small>
+                 <small class="text-danger" *ngIf="email.errors.email">incorrect</small>
+            </div>
+         </div>
+ 
+         <div class="col-20">
+             <label>
+                passe:
+             </label>
+             <input style="border:solid black 2px ;"class="form-control" type="text" placeholder="*****" id="passe" formControlName ="passe">
+         
+                 <div *ngIf="password.touched && password.invalid">
+                 <small class="text-danger" *ngIf="password.errors.required">est vide </small>
+                 <small class="text-danger" *ngIf="password.errors.pattern">incorrect</small>
+                 <small class="text-danger" *ngIf="password.errors.minlength">doit contient au moins 4 caracteres </small>
+                 
+                  </div>
+             </div>
+         <button    class="btn btn-primary"      [routerLink]="['/page10']"   type="submit"> envoyer</button>
+      </div>  
+</form>
+   </div>
+   
+
+
+        </section>
+    </div>
+    <div class="col-21 md:col-16 overflow-hidden">
+        <img src="assets/image/ins.png" alt="Image" class="md:ml-auto block md:h-full" style="clip-path: polygon(0% 0, 100% 0%,100% 100%, 0 100%)">
+    </div>
+</div>
+</div>
+
+
+
+
+<div class="card">
+    <div class="flex flex-wrap align-items-center justify-content-center card-container bg-white">
+        <div class="fadeinleft animation-duration-1000 animation-iteration-infinite flex align-items-center justify-content-center
+         font-bold bg-blue-900 text-white border-round m-2 px-5 py-3">inscription
+        </div>
+    </div>
+  </div>
+
+
+
+
+
+  
+
+    
+    
+
+
+  
+

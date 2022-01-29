@@ -1,0 +1,30 @@
+<button class="btn-primary" [routerLink]="['/add']">ajouter utilisateur</button>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">cin</th>
+        <th scope="col">nom</th>
+        <th scope="col">prenom</th>
+        <th scope="col">telephone</th>
+        <th scope="col">##</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item1 of  listuser ">
+            <td>{{ item1.cin }}</td>
+            <td>{{ item1.nom}}</td>
+            <td>{{ item1.prenom}}</td>
+            <td>{{ item1.telephone }}</td>
+        
+            <td>
+              <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success p-mr-2" (click)="edit(item1.$key)"></button>
+              <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-warning" (click)="openDialog(item1.$key)"></button>
+            
+            </td>
+      
+      </tr>
+      
+      
+    
+    </tbody>
+  </table>

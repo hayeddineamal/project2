@@ -1,0 +1,134 @@
+
+   
+        
+   
+<div class="card">
+    <div class="flex flex-wrap align-items-center justify-content-center card-container blue-container">
+        <div style="border: lef 600px;" class="fadeinleft animation-duration-3000 animation-iteration-infinite flex align-items-center justify-content-center
+         font-bold bg-blue-500 text-white border-round m-2 px-5 py-3">S'inscrire</div>
+    </div>
+</div>
+<div  class='iii'>
+<div  class="grid grid-nogutter surface-0 text-800">
+    <div class="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center ">
+
+       
+<section  >
+    <h5 style="border: lef 600px;">
+        <h1>Inscrivez-vous</h1>
+        Un de nos conseillers vous contactera au plus vite.</h5>
+    
+<form [formGroup] ="myForm" (ngSubmit)="save()"> <!--esm lform mte3na -->
+    <div class="container">
+        <div style="color:black" style="border: lef 600px;" class="col-15">
+            <label>
+            votre Nom (*):
+            </label>
+            <input   style="border:solid black 2px ;" class="form-control" type="text" placeholder="nom" id="nom" formControlName ="nom">
+            <div *ngIf="nom.touched && nom.invalid">
+                <small class="text-danger" *ngIf="nom.errors.required">vide </small>
+                <small class="text-danger" *ngIf="nom.errors.pattern">incorrect</small>
+                <small class="text-danger" *ngIf="nom.errors.minlength">doit contient au moins 3 caracters</small>                <!-- small houwa lmes eli yjik fl error -->
+            </div>
+        </div>
+    
+        <div class="col-15">
+            <label>
+               votre prenom(*):
+            </label>
+            <input style="border:solid black 2px ;" class="form-control" type="text" placeholder="prenom" id="prenom" formControlName = "prenom"> 
+            <div *ngIf="  prenom.touched &&   prenom.invalid">
+                <small class="text-danger" *ngIf="prenom.errors.required">vide</small>
+                <small class="text-danger" *ngIf="prenom.errors.pattern">incorrect</small>
+                <small class="text-danger" *ngIf="prenom.errors.minlength">contient au moins 3 caracters</small>
+            </div>
+        </div>
+       
+    
+        <div class="col-15">
+            <label>
+               votre email (*):
+            </label>
+            <input  style="border:solid black 2px ;" class="form-control" type="text" placeholder="example@gmail.com" id="email"  formControlName = "email"   >
+           <div *ngIf="email.touched && email.invalid">
+                <small class="text-danger" *ngIf="email.errors.required">vide</small>
+                <small class="text-danger" *ngIf="email.errors.email">incorrect</small>
+           </div>
+        </div>
+
+        <div class="col-15">
+            <label>
+             password
+            </label>
+            <input style="border:solid black 2px ;"class="form-control" type="text" placeholder="****" id="password" formControlName = "password">
+        
+            <div *ngIf="password.touched && password.invalid">
+                <small class="text-danger" *ngIf="password.errors.required">est vide </small>
+   
+                <small class="text-danger" *ngIf="password.errors.minlength(8)">doit contient 8 chiffres</small>
+                
+            </div>
+        </div>
+    
+        <br>
+
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">register</button>
+        <button     class="btn btn-primary" type="submit" [disabled]='myForm.invalid'> envoyer</button>
+    </div>
+</form>
+</section>
+</div>
+<div class="col-12 md:col-6 overflow-hidden">
+    <img src="assets/image/ins.png" alt="Image" class="md:ml-auto block md:h-full" style="clip-path: polygon(1% 0, 100% 0%, 100% 100%, 0 100%)">
+</div>
+</div>
+</div>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="card">
+    <div class="flex flex-wrap align-items-center justify-content-center card-container bg-white">
+        <div class="fadeinleft animation-duration-1000 animation-iteration-infinite flex align-items-center justify-content-center
+         font-bold bg-blue-900 text-white border-round m-2 px-5 py-3">inscription
+        </div>
+    </div>
+  </div>
+
+
+
+
+
+  
+
+    
+    
+
+
+  
+
+
+
+
+
+
+
+
+
+	 
+	 

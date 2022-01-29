@@ -1,0 +1,48 @@
+
+<div class="container">
+    <button class="btn btn-primary my-3" [routerLink]="['/pp-list']">Back</button>
+<hr>
+<h1 > Update User </h1>
+<div class="form">
+  <div class="col-md-9 col-md-offset-3">
+    <form [formGroup]="formGroup" (validSubmit)="onSubmit1()">
+        <div class="form-row">
+            <div class="col-md-6 mb-3">
+      <div class="form-group">
+        <label class="control-label">Cin</label>
+        <input type="text" class="form-control" formControlName="Cin" name="cin" value = "{{ data.cin }}" [(ngModel)]="data.cin">
+      </div>
+      </div>
+      <div class="col-md-6 mb-3">
+          <div class="form-group">
+            <label class="control-label">nom</label>
+            <input type="text" class="form-control" formControlName="Nom" name="nom" value = "{{ data.nom}}" [(ngModel)]="data.nom">
+          </div>
+        </div>
+        </div>
+        <div class="form-row">
+      <div class="col-md-6 mb-3">
+      <div class="form-group">
+        <label class="control-label">prenom</label>
+        <input type="text" class="form-control" formControlName="Prenom" name="prenom" value = "{{ data.prenom }}" [(ngModel)]="data.prenom">
+      </div>
+    </div>
+ 
+        <div class="col-md-6 mb-3">
+  <div class="form-group">
+    <label class="control-label">telephone</label>
+    <input type="text" class="form-control" formControlName="Telephone" name="telephone" value = "{{ data.telephone }}" [(ngModel)]="data.telephone">
+  </div>
+  </div>
+  
+    </div>
+      
+       <button class="btn btn-primary pull-right" type="submit">Update</button>
+    </form>
+    <br>
+
+  <br>
+  <br>
+    </div> 
+</div>
+</div>

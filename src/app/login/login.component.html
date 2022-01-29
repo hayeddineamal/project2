@@ -1,0 +1,96 @@
+
+<div  style="margin:40px ;"  class="hb">
+ 
+    <h1 class="text-center">login</h1>
+    <div style="margin-left:500px;">
+        
+    <form [formGroup] ='myForm' (ngSubmit)="save()"> <!--esm lform mte3na -->
+        <div class="container">
+            <div style="border: lef 600px;" class="col-10">
+            
+            </div>
+        
+           
+           
+        
+            <div class="col-8">
+                <label>
+                   votre email (*):
+                </label>
+                <input  style="border:solid black 2px ;" class="form-control" type="text" placeholder="example@gmail.com" id="email"  formControlName ="email"   >
+               <div *ngIf="email.touched && email.invalid">
+                    <small class="text-danger" *ngIf="email.errors.required">vide</small>
+                    <small class="text-danger" *ngIf="email.errors.email">incorrect</small>
+               </div>
+            </div>
+    
+            <div class="col-8">
+                <label>
+                  password(*):
+                </label>
+                <input style="border:solid black 2px ;"class="form-control" type="text" placeholder="*****" id="password" formControlName ="password">
+                <div *ngIf="password.touched && password.invalid">
+                    <small class="text-danger" *ngIf="password.errors.required">vide</small>
+                    <small class="text-danger" *ngIf="password.errors.minlength(6)">incorrect</small>
+               </div>
+                  
+            </div>
+        
+            <br>
+    
+            <button     class="btn btn-primary" type="submit" [routerLink]="['/home']" [disabled]='myForm.invalid'> envoyer</button>
+      
+        </div>
+    </form>
+    
+    </div>
+    </div>
+    <section>
+        <div class="footer bg-blue-100 border-gray-400">
+            <footer >
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 item">
+                          <h1></h1>
+                            <img style height="200" width="200" src="assets/image/kl.jpg">
+                        </div>
+                      
+        
+        
+                       
+                        <div  style="padding-top: 40px;"    class="col-md-3 item">
+                          <h5 style="color:rgb(129, 25, 25)" [routerLink]="['/projet']"  >Services</h5>
+                         <h5 [routerLink]="['/page3']"  style="color:rgb(104, 19, 19)"  >contactez-nous</h5>
+                      </div>
+                      <div class="col-md-3 item">
+                          <h2>contact</h2>
+        
+                          <h5  ><span style="color:rgb(36, 59, 189)"> 📞telephone:</span> 20406511 </h5>
+                          <h5 > <span  style="color:rgb(62, 39, 192)"> fb:</span> Smart-Ways </h5>
+                          <h5  > <span style="color:rgb(46, 22, 182)"> 📧email:</span> contact@smartways-innovation.com</h5>
+                          <h5> <span style="color:rgb(51, 35, 197)"><img src="assets/image/kl.png">linkedin:</span> Smart Ways Innovation</h5>
+                          <h5 ><span style="color:rgb(21, 24, 180)">adresse:</span>
+                             Sokra Km 3.5 - La Pépinière d'entreprises Sfax Innovation 1 - Ecole Nationale d'ingénieurs de SFAX 3052 Sfax, Tunisie
+                            </h5>
+        
+        
+                      </div>
+                      
+                  
+                    </div>
+        
+        
+                </div>
+            </footer>  
+                 
+                
+               
+        
+        
+          
+        
+        
+        
+        </div>
+        </section>
+      

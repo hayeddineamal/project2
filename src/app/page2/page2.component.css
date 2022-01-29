@@ -1,0 +1,19 @@
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: blue;
+  }
+
+
+
+
+
+
+.flex-container .box {
+    background-color: #020101;
+    width: 100%;
+    margin:10px;
+    text-align: center;
+    line-height: 25px;
+    font-size: 20px;
+  }
